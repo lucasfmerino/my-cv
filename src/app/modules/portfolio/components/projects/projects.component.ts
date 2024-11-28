@@ -1,13 +1,20 @@
-import { Component, signal, WritableSignal } from '@angular/core';
+import { Component, inject, signal, WritableSignal } from '@angular/core';
 import { IProjectDetails } from '../../interface/projectDetails.interface';
+import { EDialogPanelClass } from '../../enum/EDialogPanelClass.enum';
+import { DialogProjectsComponent } from '../dialog/dialog-projects/dialog-projects.component';
+
+// Material
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  imports: [MatDialogModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+  #dialog = inject(MatDialog);
+
   public projects: WritableSignal<IProjectDetails[]> = signal<IProjectDetails[]>([
     {
       src: '/assets/img/projects/project-heimd4ll.png',
@@ -19,9 +26,20 @@ export class ProjectsComponent {
       links: [
         {
           name: 'Conheça a Heimd4ll',
-          href: '#'
-        }
+          href: 'https://www.linkedin.com/company/heimd4ll/'
+        },
       ]
-    }
-  ])
+    },
+
+    // INSERIR MAIS PROJETOS AQUI
+
+
+  ]);
+
+  public openDialog(data: IProjectDetails) {
+    this.#dialog.open(DialogProjectsComponent, {
+      data,
+      panelClass: EDialogPanelClass.PROJECTS
+    });
+  }
 }
