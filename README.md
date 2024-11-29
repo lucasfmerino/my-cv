@@ -1,6 +1,6 @@
 # MyCv
 
-https://lucasfmerino.github.io/my-cv/browser/
+https://lucasfmerino.github.io/my-cv/
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.1.
 
