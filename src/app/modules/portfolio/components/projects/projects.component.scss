@@ -1,6 +1,6 @@
 :host {
-  margin-top: 25px;
-  padding: 25px 0;
+  margin-top: 40px;
+  padding: 0 0 40px;
 
   display: flex;
   justify-content: center;
@@ -8,14 +8,16 @@
   flex-direction: column;
 
   background: var(--black-010);
+  background: url("../../../../../../public/assets/backgrounds/constelation.svg");
 
   h2 {
     text-align: center;
-    margin: 0 0 25px 0;
+    margin: 40px 0 25px 0;
   }
 
   ul {
     display: flex;
+    margin-bottom: 120px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -54,6 +56,10 @@
   }
 
   @media (max-width: 750px) {
+    h2 {
+      margin: 10px 0 25px 0;
+    }
+
     ul {
       li {
         flex: 100%;
