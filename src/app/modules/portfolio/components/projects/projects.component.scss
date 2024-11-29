@@ -44,6 +44,11 @@
           background: var(--primary);
           border-color: var(--secondary);
         }
+
+        img {
+          padding: 0 0 0 40px;
+          box-sizing: border-box;
+        }
       }
     }
   }

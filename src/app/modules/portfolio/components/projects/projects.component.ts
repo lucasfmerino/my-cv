@@ -17,7 +17,7 @@ export class ProjectsComponent {
 
   public projects: WritableSignal<IProjectDetails[]> = signal<IProjectDetails[]>([
     {
-      src: '/assets/img/projects/project-heimd4ll.png',
+      src: '/assets/img/projects/hmdl-logo.png',
       alt: 'Projeto Heimd4ll',
       title: 'Heimd4ll - Inteligência em Dados',
       width: '200',

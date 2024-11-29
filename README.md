@@ -72,5 +72,5 @@ Deploy:
 ng deploy --base-href https://SEU_PERFIL_GITHUB.github.io/SEU_REPO_GITHUB/browser/
 
 # exemplo:
-ng deploy --base-href https://lucasfmerino.github.io/my-cv/browser/
+ng deploy --base-href https://lucasfmerino.github.io/my-cv/
 ```
